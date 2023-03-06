@@ -36,20 +36,14 @@ class MainScreen extends StatelessWidget {
                   top: height / 2 - 200 - carouselOffset * 30,
                   left: -100 - carouselOffset * 60,
                   child: Transform.rotate(
-                    angle: -carouselOffset * 1,
-                    child: Image.asset(
-                      'assets/images/circle.png',
-                      scale: 0.4,
-                    ),
+                    angle: -carouselOffset * 0.7,
+                    child: Image.asset(bigCircleNode, scale: 0.7),
                   ),
                 ),
                 Positioned(
                   top: height / 3 - 150 + carouselOffset * 60,
                   right: 50 - carouselOffset * 60,
-                  child: Image.asset(
-                    'assets/images/circle.png',
-                    scale: 1.2,
-                  ),
+                  child: Image.asset(circleNode, scale: 1.2),
                 ),
                 child ?? const SizedBox.shrink(),
               ],
