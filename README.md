@@ -1,16 +1,33 @@
-# bank_ui_app
+# Bank Ui Example 💸
 
-A new Flutter project.
+[![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)]()
+![GitHub release](https://img.shields.io/badge/release-v1.0.0-blue)
+[![View DEMO](https://img.shields.io/badge/VIEW-DEMO-lightgreen.svg)](https://stellular-centaur-5592ec.netlify.app/#/)
 
-## Getting Started
+This is a simple example of how to use the bank ui.
 
-This project is a starting point for a Flutter application.
+## Project info
+- Developed with flutter 3.7.3
+- Supports both android and ios as well as web
+- Uses Riverpod for state management
+- Uses Slivers for advanced scrolls and animations
 
-A few resources to get you started if this is your first Flutter project:
+## Demo 
+Web page with device preview can be found [here](https://stellular-centaur-5592ec.netlify.app/#/)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## How to run
+- Clone the repo
+```shell
+    git clone https://gitlab.extrawest.com/i-training/flutter/oleksii.melnychenko_bank_ui_app.git your_custom_project_name
+```
+- Install dependencies
+```shell
+    flutter pub get
+```
+- Run the app
+```shell
+    flutter run
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#### Developed with ❤️ by _Lesha Melnychenko_
+

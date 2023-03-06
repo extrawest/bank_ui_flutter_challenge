@@ -43,18 +43,7 @@ class DetailsSliver extends ConsumerWidget {
                   const SizedBox(height: 8),
                   Row(
                     children: [
-                      Text(
-                        '🇺🇸',
-                        style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                          shadows: [
-                            Shadow(
-                              color: Colors.black.withOpacity(0.25),
-                              offset: const Offset(0, 2),
-                              blurRadius: 5,
-                            ),
-                          ],
-                        ),
-                      ),
+                      Image.asset(usaFlag),
                       const SizedBox(width: 8),
                       Text(
                         'USD 56*3254',

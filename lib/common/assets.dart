@@ -3,6 +3,7 @@ import 'dart:ui';
 // images
 const circleNode = 'assets/images/circle.png';
 const bigCircleNode = 'assets/images/big_circle.png';
+const usaFlag = 'assets/images/usa_flag.png';
 
 // icons
 const faceIdImage = 'assets/icons/face_id.svg';
