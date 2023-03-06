@@ -1,14 +1,13 @@
-import 'dart:ui';
 
 String dateToExpiry(DateTime dateTime) {
-  String day = dateTime.day.toString().padLeft(2, '0');
-  String month = dateTime.month.toString().padLeft(2, '0');
+  final day = dateTime.day.toString().padLeft(2, '0');
+  final month = dateTime.month.toString().padLeft(2, '0');
   return '$day/$month';
 }
 
 String formatBalance(double balance) {
-  String balanceStr = balance.toStringAsFixed(2);
-  String integerPart = balanceStr.split('.')[0];
+  final balanceStr = balance.toStringAsFixed(2);
+  final integerPart = balanceStr.split('.')[0];
   String formatted = '';
   int count = 0;
   for (int i = integerPart.length - 1; i >= 0; i--) {

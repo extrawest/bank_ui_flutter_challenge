@@ -29,9 +29,7 @@ class TransactionItem extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 4),
       child: Row(
         children: [
-          transaction.amount.startsWith('-')
-              ? SvgPicture.asset('assets/icons/money_out.svg')
-              : SvgPicture.asset('assets/icons/money_in.svg'),
+          if (transaction.amount.startsWith('-')) SvgPicture.asset('assets/icons/money_out.svg') else SvgPicture.asset('assets/icons/money_in.svg'),
           const SizedBox(width: 12),
           Expanded(
             child: Column(
