@@ -1,5 +1,4 @@
 import 'package:bank_ui_app/common/assets.dart';
-import 'package:bank_ui_app/screens/main_screen.dart';
 import 'package:bank_ui_app/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +13,7 @@ class BankUIApp extends StatelessWidget {
         colorScheme: const ColorScheme.dark().copyWith(primary: coral),
       ),
       debugShowCheckedModeBanner: false,
-      home: MainScreen(),
+      home: const SplashScreen(),
     );
   }
 }

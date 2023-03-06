@@ -43,7 +43,7 @@ class SplashScreen extends StatelessWidget {
                             assetPath: faceIdImage,
                             title: 'Face Id',
                             onPressed: () {
-                              Navigator.of(context).push(
+                              Navigator.of(context).pushReplacement(
                                 MaterialPageRoute(
                                     builder: (context) => const MainScreen()),
                               );
@@ -53,7 +53,7 @@ class SplashScreen extends StatelessWidget {
                             assetPath: pinCodeImage,
                             title: 'Pin Code',
                             onPressed: () {
-                              Navigator.of(context).push(
+                              Navigator.of(context).pushReplacement(
                                 MaterialPageRoute(
                                     builder: (context) => const MainScreen()),
                               );
@@ -63,7 +63,7 @@ class SplashScreen extends StatelessWidget {
                             assetPath: otherImage,
                             title: 'Other',
                             onPressed: () {
-                              Navigator.of(context).push(
+                              Navigator.of(context).pushReplacement(
                                 MaterialPageRoute(
                                     builder: (context) => const MainScreen()),
                               );
