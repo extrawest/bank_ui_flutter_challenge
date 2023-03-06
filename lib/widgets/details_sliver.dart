@@ -14,7 +14,7 @@ class DetailsSliver extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final transactions = ref.watch(fakeTransactionsProvider);
-    return SliverFillRemaining(
+    return SliverToBoxAdapter(
       child: ClipRRect(
         child: BackdropFilter(
           filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),

@@ -1,3 +1,5 @@
+import 'package:bank_ui_app/common/assets.dart';
+import 'package:bank_ui_app/common/magic_numbers.dart';
 import 'package:bank_ui_app/common/utils.dart';
 import 'package:bank_ui_app/providers/scroll_offset_provider.dart';
 import 'package:bank_ui_app/widgets/cards_carousel.dart';
@@ -37,14 +39,14 @@ class CardSliver extends StatelessWidget {
             children: [
               child ?? const SizedBox.shrink(),
               Positioned(
-                top: 60 - carouselOffset * 10,
-                left: 10 + carouselOffset * 50,
-                child: Image.asset('assets/images/circle.png',scale: 3,),
+                top: getTopOffsetOfFrontUpperNode(carouselOffset),
+                left: getLeftOffsetOfFrontUpperNode(carouselOffset),
+                child: Image.asset(circleNode ,scale: 3),
               ),
               Positioned(
                 bottom: 5,
-                right: 0 + carouselOffset * 60,
-                child: Image.asset('assets/images/circle.png',scale: 3,),
+                right: getRightOffsetOfFrontLowerNode(carouselOffset),
+                child: Image.asset(circleNode,scale: 3),
               ),
             ],
           );

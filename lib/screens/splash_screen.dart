@@ -1,4 +1,5 @@
 import 'package:bank_ui_app/common/assets.dart';
+import 'package:bank_ui_app/common/magic_numbers.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/login_option_button.dart';
@@ -15,9 +16,8 @@ class SplashScreen extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            stops: [0.0267, 1.0026],
             colors: [Color(0xFF432148), Color(0xFF213048)],
-            transform: GradientRotation(150.11 * 3.141592 / 180),
+            transform: GradientRotation(gradientRotation),
           ),
         ),
         child: SafeArea(

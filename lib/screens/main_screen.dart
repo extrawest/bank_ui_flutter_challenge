@@ -1,3 +1,4 @@
+import 'package:bank_ui_app/common/magic_numbers.dart';
 import 'package:bank_ui_app/providers/card_carousel_offset_provider.dart';
 import 'package:bank_ui_app/widgets/details_sliver.dart';
 import 'package:flutter/material.dart';
@@ -21,9 +22,8 @@ class MainScreen extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            stops: [0.0267, 1.0026],
             colors: [purple, deepBlue],
-            transform: GradientRotation(150.11 * 3.141592 / 180),
+            transform: GradientRotation(gradientRotation),
           ),
         ),
         child: Consumer(
@@ -33,16 +33,16 @@ class MainScreen extends StatelessWidget {
             return Stack(
               children: [
                 Positioned(
-                  top: height / 2 - 200 - carouselOffset * 30,
-                  left: -100 - carouselOffset * 60,
+                  top: getTopOffsetOfBigNode(height, carouselOffset),
+                  left: getLeftOffsetOfBigNode(carouselOffset),
                   child: Transform.rotate(
                     angle: -carouselOffset * 0.7,
                     child: Image.asset(bigCircleNode, scale: 0.7),
                   ),
                 ),
                 Positioned(
-                  top: height / 3 - 150 + carouselOffset * 60,
-                  right: 50 - carouselOffset * 60,
+                  top: getTopOffsetOfSmallNode(height, carouselOffset),
+                  right: getRightOffsetOfSmallNode(carouselOffset),
                   child: Image.asset(circleNode, scale: 1.2),
                 ),
                 child ?? const SizedBox.shrink(),
