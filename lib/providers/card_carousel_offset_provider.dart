@@ -1,14 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../notifiers/card_carousel_offset_notifier.dart';
+
 final cardCarouselOffsetProvider =
 StateNotifierProvider<CardCarouselOffsetNotifier, double>(
       (ref) => CardCarouselOffsetNotifier(),
 );
-
-class CardCarouselOffsetNotifier extends StateNotifier<double> {
-  CardCarouselOffsetNotifier() : super(0.0);
-
-  void updateScrollOffset(double offset) {
-    state = offset;
-  }
-}
