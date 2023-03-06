@@ -4,6 +4,8 @@ import 'package:bank_ui_app/widgets/cards_carousel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../providers/card_carousel_offset_provider.dart';
+
 
 class CardSliver extends StatelessWidget {
   const CardSliver({Key? key}) : super(key: key);
@@ -28,36 +30,42 @@ class CardSliver extends StatelessWidget {
               ),
             ));
       },
-      child: Stack(
-        children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+      child: Consumer(
+        builder: (context, ref, child) {
+          final carouselOffset = ref.watch(cardCarouselOffsetProvider);
+          return Stack(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 16),
-                child: Text(
-                  'Cards',
-                  style: Theme.of(context)
-                      .textTheme
-                      .headlineLarge
-                      ?.copyWith(fontWeight: FontWeight.bold),
-                ),
+              child ?? const SizedBox.shrink(),
+              Positioned(
+                top: 60 - carouselOffset * 10,
+                left: 10 + carouselOffset * 50,
+                child: Image.asset('assets/images/circle.png',scale: 3,),
               ),
-              const SizedBox(height: 44),
-              const CardsCarousel(),
+              Positioned(
+                bottom: 5,
+                right: 0 + carouselOffset * 60,
+                child: Image.asset('assets/images/circle.png',scale: 3,),
+              ),
             ],
-          ),
-          Positioned(
-            top: 60,
-            left: 10,
-            child: Image.asset('assets/images/circle.png',scale: 3,),
-          ),
-          Positioned(
-            bottom: 5,
-            right: 0,
-            child: Image.asset('assets/images/circle.png',scale: 3,),
-          ),
-        ],
+          );
+        },
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 16),
+              child: Text(
+                'Cards',
+                style: Theme.of(context)
+                    .textTheme
+                    .headlineLarge
+                    ?.copyWith(fontWeight: FontWeight.bold),
+              ),
+            ),
+            const SizedBox(height: 44),
+            const CardsCarousel(),
+          ],
+        ),
       ),
     );
   }

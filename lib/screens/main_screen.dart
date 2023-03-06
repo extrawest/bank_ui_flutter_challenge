@@ -1,3 +1,4 @@
+import 'package:bank_ui_app/providers/card_carousel_offset_provider.dart';
 import 'package:bank_ui_app/widgets/details_sliver.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -25,40 +26,53 @@ class MainScreen extends StatelessWidget {
             transform: GradientRotation(150.11 * 3.141592 / 180),
           ),
         ),
-        child: Stack(
-          children: [
-            Positioned(
-              top: MediaQuery.of(context).size.height / 2 - 150,
-              left: -100,
-              child: Image.asset('assets/images/circle.png', scale: 0.5,),
-            ),
-            Positioned(
-              top: MediaQuery.of(context).size.height / 3 - 150,
-              right: 50,
-              child: Image.asset('assets/images/circle.png', scale: 1.2,),
-            ),
-            SafeArea(
-              child: Consumer(builder: (context, ref, _) {
-                final controller = ref.watch(scrollControllerProvider);
-                controller.addListener(() {
-                  ref
-                      .read(scrollOffsetProvider.notifier)
-                      .updateScrollOffset(controller.offset);
-                });
-                return Padding(
-                  padding: const EdgeInsets.only(top: 50),
-                  child: CustomScrollView(
-                    controller: ref.watch(scrollControllerProvider),
-                    physics: const ClampingScrollPhysics(),
-                    slivers: const [
-                      CardSliver(),
-                      DetailsSliver()
-                    ],
+        child: Consumer(
+          builder: (context, ref, child) {
+            final carouselOffset = ref.watch(cardCarouselOffsetProvider);
+            final height = MediaQuery.of(context).size.height;
+            return Stack(
+              children: [
+                Positioned(
+                  top: height / 2 - 200 - carouselOffset * 30,
+                  left: -100 - carouselOffset * 60,
+                  child: Transform.rotate(
+                    angle: -carouselOffset * 1,
+                    child: Image.asset(
+                      'assets/images/circle.png',
+                      scale: 0.4,
+                    ),
                   ),
-                );
-              }),
-            ),
-          ],
+                ),
+                Positioned(
+                  top: height / 3 - 150 + carouselOffset * 60,
+                  right: 50 - carouselOffset * 60,
+                  child: Image.asset(
+                    'assets/images/circle.png',
+                    scale: 1.2,
+                  ),
+                ),
+                child ?? const SizedBox.shrink(),
+              ],
+            );
+          },
+          child: SafeArea(
+            child: Consumer(builder: (context, ref, _) {
+              final controller = ref.watch(scrollControllerProvider);
+              controller.addListener(() {
+                ref
+                    .read(scrollOffsetProvider.notifier)
+                    .updateScrollOffset(controller.offset);
+              });
+              return Padding(
+                padding: const EdgeInsets.only(top: 50),
+                child: CustomScrollView(
+                  controller: ref.watch(scrollControllerProvider),
+                  physics: const ClampingScrollPhysics(),
+                  slivers: const [CardSliver(), DetailsSliver()],
+                ),
+              );
+            }),
+          ),
         ),
       ),
       extendBody: true,

@@ -1,3 +1,4 @@
+import 'package:bank_ui_app/providers/card_carousel_offset_provider.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -32,7 +33,9 @@ class _CardsCarouselState extends ConsumerState<CardsCarousel> {
             enlargeCenterPage: true,
             padEnds: false,
             onScrolled: (offset) {
-              //TODO: add animation
+              ref
+                  .read(cardCarouselOffsetProvider.notifier)
+                  .updateScrollOffset(offset ?? 0);
             },
             onPageChanged: (index, reason) {
               setState(() {
