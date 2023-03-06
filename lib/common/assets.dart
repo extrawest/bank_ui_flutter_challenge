@@ -9,6 +9,10 @@ const transfersIcon = 'assets/icons/transfers.svg';
 const profileIcon = 'assets/icons/profile.svg';
 const mastercardIcon = 'assets/icons/mastercard_logo.svg';
 
+const creditCardIcon = 'assets/icons/credit-card.svg';
+const loaderIcon = 'assets/icons/loader.svg';
+const unlockIcon = 'assets/icons/unlock.svg';
+
 const whiteBg = Color.fromRGBO(240, 242, 244, .9);
 const purple = Color(0xFF432148);
 const deepBlue = Color(0xFF213048);

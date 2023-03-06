@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:bank_ui_app/providers/fake_transaction_provider.dart';
+import 'package:bank_ui_app/widgets/details_action_item.dart';
 import 'package:bank_ui_app/widgets/transaction_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -57,10 +58,11 @@ class DetailsSliver extends ConsumerWidget {
                       const SizedBox(width: 8),
                       Text(
                         'USD 56*3254',
-                        style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                              color: Colors.black87,
-                              fontWeight: FontWeight.w400,
-                            ),
+                        style:
+                            Theme.of(context).textTheme.titleMedium?.copyWith(
+                                  color: Colors.black87,
+                                  fontWeight: FontWeight.w400,
+                                ),
                       ),
                       const Spacer(),
                       TextButton(
@@ -69,11 +71,13 @@ class DetailsSliver extends ConsumerWidget {
                           children: [
                             Text(
                               'See',
-                              style:
-                                  Theme.of(context).textTheme.titleMedium?.copyWith(
-                                        color: coral,
-                                        fontWeight: FontWeight.w400,
-                                      ),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleMedium
+                                  ?.copyWith(
+                                    color: coral,
+                                    fontWeight: FontWeight.w400,
+                                  ),
                             ),
                             const SizedBox(width: 8),
                             const Icon(Icons.arrow_forward_ios)
@@ -99,6 +103,38 @@ class DetailsSliver extends ConsumerWidget {
                   ...transactions
                       .map((model) => TransactionItem(transaction: model))
                       .toList(),
+                  Container(
+                    width: double.infinity,
+                    alignment: Alignment.centerRight,
+                    child: TextButton(
+                      onPressed: () {},
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            'Full history',
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleMedium
+                                ?.copyWith(
+                                  color: coral,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                          ),
+                          const SizedBox(width: 8),
+                          const Icon(Icons.arrow_forward_ios)
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  ...detailsActions
+                      .map(
+                        (action) => DetailsAction(
+                            action: action,
+                            isFirst: detailsActions.indexOf(action) == 0),
+                      )
+                      .toList()
                 ],
               ),
             ),

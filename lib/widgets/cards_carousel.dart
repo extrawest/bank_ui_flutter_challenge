@@ -59,7 +59,7 @@ class _CardsCarouselState extends ConsumerState<CardsCarousel> {
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black,
+                        color: Colors.black45,
                         blurRadius: 2,
                         spreadRadius: 0,
                         offset: Offset(0, 1),
