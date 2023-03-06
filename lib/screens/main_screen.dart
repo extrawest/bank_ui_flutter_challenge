@@ -6,7 +6,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../common/assets.dart';
 import '../providers/scroll_controller_provider.dart';
-import '../providers/scroll_offset_provider.dart';
 import '../widgets/app_bottom_bar.dart';
 import '../widgets/card_sliver.dart';
 
@@ -51,12 +50,6 @@ class MainScreen extends StatelessWidget {
           },
           child: SafeArea(
             child: Consumer(builder: (context, ref, _) {
-              final controller = ref.watch(scrollControllerProvider);
-              controller.addListener(() {
-                ref
-                    .read(scrollOffsetProvider.notifier)
-                    .updateScrollOffset(controller.offset);
-              });
               return Padding(
                 padding: const EdgeInsets.only(top: 50),
                 child: CustomScrollView(
