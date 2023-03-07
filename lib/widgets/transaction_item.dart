@@ -1,3 +1,4 @@
+import 'package:bank_ui_app/common/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -29,7 +30,10 @@ class TransactionItem extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 4),
       child: Row(
         children: [
-          if (transaction.amount.startsWith('-')) SvgPicture.asset('assets/icons/money_out.svg') else SvgPicture.asset('assets/icons/money_in.svg'),
+          if (transaction.amount.startsWith('-'))
+            SvgPicture.asset(mooneyOutIcon)
+          else
+            SvgPicture.asset(mooneyInIcon),
           const SizedBox(width: 12),
           Expanded(
             child: Column(

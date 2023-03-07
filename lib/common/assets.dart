@@ -17,6 +17,8 @@ const mastercardIcon = 'assets/icons/mastercard_logo.svg';
 const creditCardIcon = 'assets/icons/credit-card.svg';
 const loaderIcon = 'assets/icons/loader.svg';
 const unlockIcon = 'assets/icons/unlock.svg';
+const mooneyInIcon = 'assets/icons/money_in.svg';
+const mooneyOutIcon = 'assets/icons/money_out.svg';
 
 // colors
 const whiteBg = Color.fromRGBO(240, 242, 244, .9);

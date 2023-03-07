@@ -14,7 +14,7 @@ class AppBottomBar extends StatelessWidget {
         borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
         child: BottomNavigationBar(
           backgroundColor: Colors.white,
-          selectedItemColor: const Color.fromRGBO(235, 87, 87, 1),
+          selectedItemColor: coral,
           unselectedItemColor: Colors.grey,
           selectedLabelStyle: const TextStyle(fontWeight: FontWeight.w700),
           type: BottomNavigationBarType.fixed,
