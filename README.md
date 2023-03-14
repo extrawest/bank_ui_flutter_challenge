@@ -1,24 +1,25 @@
-# Bank Ui Example 💸
+# Bank UI Flutter Challenge 💸
 
-[![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)]()
+[![Maintanence](https://img.shields.io/badge/Maintenance-yes-blue.svg)]()
 ![GitHub release](https://img.shields.io/badge/release-v1.0.0-blue)
+![Supported Platforms](https://img.shields.io/badge/Platform-Android%20|%20iOS%20|%20Web%20%20-blue.svg?logo=flutter)
 [![View DEMO](https://img.shields.io/badge/VIEW-DEMO-lightgreen.svg)](https://stellular-centaur-5592ec.netlify.app/#/)
 
-This is a simple example of how to use the bank ui.
+Bank UI implementation with help of Slivers, Glassmorphism and beautiful animations
 
 ## Project info
-- Developed with flutter 3.7.3
-- Supports both android and ios as well as web
+- Developed with latest version of Flutter
+- Supports Android, iOS, WEB
 - Uses Riverpod for state management
 - Uses Slivers for advanced scrolls and animations
 
 ## Demo 
-Web page with device preview can be found [here](https://stellular-centaur-5592ec.netlify.app/#/)
+[Web page with device preview](https://stellular-centaur-5592ec.netlify.app/#/)
 
 ## How to run
 - Clone the repo
 ```shell
-    git clone https://gitlab.extrawest.com/i-training/flutter/oleksii.melnychenko_bank_ui_app.git your_custom_project_name
+    git clone x your_custom_project_name
 ```
 - Install dependencies
 ```shell
@@ -29,5 +30,8 @@ Web page with device preview can be found [here](https://stellular-centaur-5592e
     flutter run
 ```
 
-#### Developed with ❤️ by _Lesha Melnychenko_
+[Bank UI](https://www.figma.com/community/file/967000607649358851)
 
+Developed by **Lesha Melnychenko**
+
+[Extrawest.com](https://www.extrawest.com), 2023
