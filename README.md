@@ -14,12 +14,12 @@ Bank UI implementation with help of Slivers, Glassmorphism and beautiful animati
 - Uses Slivers for advanced scrolls and animations
 
 ## Demo 
-[Web page with device preview](https://stellular-centaur-5592ec.netlify.app/#/)
+[Web Demo](https://stellular-centaur-5592ec.netlify.app/#/)
 
 ## How to run
 - Clone the repo
 ```shell
-    git clone x your_custom_project_name
+    git clone https://github.com/extrawest/bank_ui_flutter_challenge.git your_custom_project_name
 ```
 - Install dependencies
 ```shell
@@ -30,7 +30,7 @@ Bank UI implementation with help of Slivers, Glassmorphism and beautiful animati
     flutter run
 ```
 
-[Bank UI](https://www.figma.com/community/file/967000607649358851)
+[Bank UI Figma](https://www.figma.com/community/file/967000607649358851)
 
 Developed by **Lesha Melnychenko**
 
