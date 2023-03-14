@@ -16,6 +16,12 @@ Bank UI implementation with help of Slivers, Glassmorphism and beautiful animati
 ## Demo 
 [Web Demo](https://stellular-centaur-5592ec.netlify.app/#/)
 
+
+
+https://user-images.githubusercontent.com/42183561/225042117-4967aa33-05f9-45fa-bce4-63eedb1e56ac.mp4
+
+
+
 ## How to run
 - Clone the repo
 ```shell
